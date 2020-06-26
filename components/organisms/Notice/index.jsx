@@ -20,7 +20,7 @@ const Notice = () => {
           {/* <Mordal /> */}
         </Styled.NoticeImageContainer>
         <List
-          direction={ListDirection.col}
+          direction={ListDirection.COL}
           height="472px"
           card={true}
           shadow={true}
@@ -134,8 +134,8 @@ const Notice = () => {
               </a>
             </P>
           </Styled.NoticeInformationText>
-          <ListItem height="auto" self={ItemSelfOrder.center}>
-            <Button width="200px" height="40px">
+          <ListItem width="100%" self={ItemSelfOrder.center}>
+            <Button width="40%" height="40px">
               가입신청
             </Button>
           </ListItem>

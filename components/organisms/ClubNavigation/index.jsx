@@ -2,11 +2,7 @@ import React from "react";
 
 import * as Styled from "./style";
 import ClubMenu from "../ClubMenu";
-import List, {
-  ListDirection,
-  ListJustifyOrder,
-  ListAlignOrder,
-} from "../../molecules/List";
+import List, { ListDirection, ListSort } from "../../molecules/List";
 import ListItem, {
   ItemDirection,
   ItemAlignOrder,
@@ -30,11 +26,10 @@ const ClubNavigation = () => {
     return (
       <List
         card={true}
-        direction={ListDirection.col}
-        align={ListAlignOrder.center}
-        justify={ListJustifyOrder.between}
+        direction={ListDirection.COL}
+        sort={ListSort.SPACE_BETWEEN_CENTER}
         width="100%"
-        margin="2rem"
+        mar={[0, 0, 2, 0]}
       >
         <ListItem width="inherit" justify={ItemJustifyOrder.between}>
           <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
@@ -90,11 +85,7 @@ const ClubNavigation = () => {
 
   return (
     <>
-      <List
-        width="100%"
-        direction={ListDirection.col}
-        align={ListAlignOrder.center}
-      >
+      <List width="100%" direction={ListDirection.COL}>
         <ListItem direction={ItemDirection.col} align={ItemAlignOrder.center}>
           <Image
             marginBottom="2rem"

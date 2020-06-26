@@ -2,7 +2,11 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "./style";
-import { CalculateBox, CalculateFlexAttribute } from "../../../utils";
+import {
+  CalculateSort,
+  CalculateBox,
+  CalculateFlexAttribute,
+} from "../../../utils";
 
 export const BoxDirection = {
   ROW: "row",
@@ -31,26 +35,6 @@ export const BoxSort = {
   SPACE_AROUND_LEFT: 51,
   SPACE_AROUND_CENTER: 52,
   SPACE_AROUND_RIGHT: 53,
-};
-
-const CalculateSort = (sort) => {
-  const horizontalNumber = sort % 10;
-  const verticalNumber = Math.floor(sort / 10);
-
-  let horizontal = "center";
-  let vertical = "center";
-
-  if (horizontalNumber === 1) horizontal = "flex-start";
-  else if (horizontalNumber === 3) horizontal = "flex-end";
-  else if (horizontalNumber === 4) horizontal = "space-between";
-  else if (horizontalNumber === 5) horizontal = "space-around";
-
-  if (verticalNumber === 1) vertical = "flex-start";
-  else if (verticalNumber === 3) vertical = "flex-end";
-  else if (verticalNumber === 4) vertical = "space-between";
-  else if (verticalNumber === 5) vertical = "space-around";
-
-  return [horizontal, vertical];
 };
 
 const Box = ({

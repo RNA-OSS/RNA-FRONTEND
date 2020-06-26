@@ -17,12 +17,6 @@ export const HeaderContainer = styled.header`
   z-index: 100;
 `;
 
-export const HeaderLeftContainer = styled.div`
-  flex: 0 1 ${NAV_WIDTH};
-  display: flex;
-  align-items: center;
-`;
-
 export const HeaderRightContainer = styled.div`
   display: flex;
   flex-direction: row;

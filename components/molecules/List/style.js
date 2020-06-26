@@ -19,9 +19,8 @@ export const List = styled.ul`
   justify-content: ${(props) => props.justify};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  margin-right: ${(props) => (props.direction === "row" ? props.margin : "0")};
-  margin-bottom: ${(props) =>
-    props.direction === "column" ? props.margin : "0"};
+  margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
   ${(props) => props.card && Card};
   ${(props) => props.shadow && CardShadow};
 `;

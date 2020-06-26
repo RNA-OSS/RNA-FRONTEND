@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import * as Styled from "./style";
-import List, { ListDirection } from "../../molecules/List";
+import List, { ListDirection, ListSort } from "../../molecules/List";
 import ListItem, {
   ItemAlignOrder,
   ItemJustifyOrder,
@@ -86,7 +86,12 @@ const ClubMenu = () => {
     ));
 
   return (
-    <List card={true} direction={ListDirection.col} width="100%">
+    <List
+      card={true}
+      direction={ListDirection.COL}
+      sort={ListSort.CENTER_LEFT}
+      width="100%"
+    >
       {renderMenuList(menuItems)}
     </List>
   );

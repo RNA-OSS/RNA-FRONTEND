@@ -2,44 +2,63 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "./style";
-
-export const ListJustifyOrder = {
-  start: "flex-start",
-  end: "flex-end",
-  center: "center",
-  between: "space-between",
-};
-
-export const ListAlignOrder = {
-  start: "flex-start",
-  end: "flex-end",
-  center: "center",
-  between: "space-between",
-};
+import { CalculateSort, CalculateBox } from "../../../utils";
 
 export const ListDirection = {
-  row: "row",
-  col: "column",
+  ROW: "row",
+  COL: "column",
+};
+
+export const ListSort = {
+  TOP_LEFT: 11,
+  TOP_CENTER: 12,
+  TOP_RIGHT: 13,
+  TOP_SPACE_BETWEEN: 14,
+  TOP_SPACE_AROUND: 15,
+  CENTER_LEFT: 21,
+  CENTER_CENTER: 22,
+  CENTER_RIGHT: 23,
+  CENTER_SPACE_BETWEEN: 24,
+  CENTER_SPACE_AROUND: 25,
+  BOTTOM_LEFT: 31,
+  BOTTOM_CENTER: 32,
+  BOTTOM_RIGHT: 33,
+  BOTTOM_SPACE_BETWEEN: 34,
+  BOTTOM_SPACE_AROUND: 35,
+  SPACE_BETWEEN_LEFT: 41,
+  SPACE_BETWEEN_CENTER: 42,
+  SPACE_BETWEEN_RIGHT: 43,
+  SPACE_AROUND_LEFT: 51,
+  SPACE_AROUND_CENTER: 52,
+  SPACE_AROUND_RIGHT: 53,
 };
 
 const List = ({
   children,
+  direction = ListDirection.ROW,
   width = "auto",
   height = "auto",
-  justify = ListJustifyOrder.start,
-  align = ListAlignOrder.start,
-  direction = ListDirection.row,
-  margin = "0",
+  sort = ListSort.CENTER_CENTER,
+  mar = [0],
+  pad = [0],
   card = false,
   shadow = false,
 }) => {
+  const [horizontal, vertical] = CalculateSort(sort);
+  const justifyContent =
+    direction === ListDirection.ROW ? horizontal : vertical;
+  const alignItems = direction === ListDirection.ROW ? vertical : horizontal;
+  const margin = CalculateBox(mar);
+  const padding = CalculateBox(pad);
+
   return (
     <Styled.List
       width={width}
       height={height}
-      justify={justify}
-      align={align}
+      justify={justifyContent}
+      align={alignItems}
       direction={direction}
+      padding={padding}
       margin={margin}
       card={card}
       shadow={shadow}
@@ -53,10 +72,8 @@ List.propTypes = {
   children: propTypes.node.isRequired,
   width: propTypes.string,
   height: propTypes.string,
-  justify: propTypes.string,
-  align: propTypes.string,
   direction: propTypes.string,
-  margin: propTypes.string,
+  margin: propTypes.array,
   card: propTypes.bool,
   shadow: propTypes.bool,
 };

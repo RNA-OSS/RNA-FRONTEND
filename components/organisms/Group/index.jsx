@@ -1,11 +1,7 @@
 import React from "react";
 
 import * as Styled from "./style";
-import List, {
-  ListDirection,
-  ListAlignOrder,
-  ListJustifyOrder,
-} from "../../molecules/List";
+import List, { ListDirection, ListSort } from "../../molecules/List";
 import ListItem, {
   ItemSelfOrder,
   ItemJustifyOrder,
@@ -58,12 +54,11 @@ const Group = () => {
   let renderGroupItem = (groupList) =>
     groupList.map((data) => (
       <List
-        direction={ListDirection.col}
-        align={ListAlignOrder.center}
-        justify={ListJustifyOrder.between}
+        direction={ListDirection.COL}
+        sort={ListSort.SPACE_BETWEEN_CENTER}
         width="32%"
         height="393px"
-        margin="2rem"
+        margin={[0, 0, 2, 0]}
         card={true}
         shadow={true}
         key={data.id}

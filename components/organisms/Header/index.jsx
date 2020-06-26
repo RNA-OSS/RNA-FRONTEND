@@ -7,7 +7,7 @@ import { LOGOUT_REQUEST } from "../../../reducers/user";
 import Image, { Type } from "../../atoms/Image";
 import A, { ASize, AWeight } from "../../atoms/A";
 import Container from "../../molecules/Container";
-import List, { ListAlignOrder } from "../../molecules/List";
+import List, { ListSort, ListDirection } from "../../molecules/List";
 import ListItem, { ItemAlignOrder } from "../../molecules/ListItem";
 import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
 
@@ -36,7 +36,7 @@ const Header = () => {
           height="100%"
           mar={[0, 0, 0, 3]}
         >
-          <List align={ListAlignOrder.center} height="inherit">
+          <List sort={ListSort.CENTER_LEFT} height="inherit">
             <ListItem
               height="inherit"
               margin="4rem"
@@ -52,7 +52,7 @@ const Header = () => {
               </A>
             </ListItem>
           </List>
-          <List align={ListAlignOrder.center}>
+          <List sort={ListSort.CENTER_LEFT}>
             {me != null ? (
               <>
                 <ListItem margin="2rem" align={ItemAlignOrder.center}>
