@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "./style";
-import { CalculateBox } from "./../../../utils";
+import { CalculateBox, CalculateFlexAttribute } from "./../../../utils";
 
 export const BoxDirection = {
   ROW: "row",
@@ -55,16 +55,19 @@ const CalculateSort = (sort) => {
 
 const Box = ({
   children,
-  direction = BoxDirection.row,
+  direction = BoxDirection.ROW,
   sort = BoxSort.CENTER_CENTER,
   mar = [0],
   pad = [0],
+  flexAttr = ["auto"],
+  width = "100%",
+  height = "auto",
 }) => {
   const [horizontal, vertical] = CalculateSort(sort);
 
   const justifyContent = direction === BoxDirection.ROW ? horizontal : vertical;
   const alignItems = direction === BoxDirection.ROW ? vertical : horizontal;
-
+  const flex = CalculateFlexAttribute(flexAttr);
   const margin = CalculateBox(mar);
   const padding = CalculateBox(pad);
 
@@ -75,6 +78,9 @@ const Box = ({
       align={alignItems}
       margin={margin}
       padding={padding}
+      width={width}
+      height={height}
+      flex={flex}
     >
       {children}
     </Styled.Box>

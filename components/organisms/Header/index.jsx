@@ -9,6 +9,7 @@ import A, { ASize, AWeight } from "../../atoms/A";
 import Container from "../../molecules/Container";
 import List, { ListAlignOrder } from "../../molecules/List";
 import ListItem, { ItemAlignOrder } from "../../molecules/ListItem";
+import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
 
 const Header = () => {
   const { me } = useSelector((state) => state.userReducer);
@@ -21,15 +22,20 @@ const Header = () => {
   return (
     <Styled.HeaderContainer>
       <Container>
-        <Styled.HeaderLeftContainer>
+        <Box flexAttr={[0, 1, "283px"]}>
           <Link href="/">
             <A>
               <Image src="Logo.svg" type={Type.img} />
             </A>
           </Link>
-        </Styled.HeaderLeftContainer>
+        </Box>
 
-        <Styled.HeaderRightContainer>
+        <Box
+          direction={BoxDirection.ROW}
+          sort={BoxSort.CENTER_SPACE_BETWEEN}
+          height="100%"
+          mar={[0, 0, 0, 3]}
+        >
           <List align={ListAlignOrder.center}>
             <ListItem height="100%" margin="4rem" align={ItemAlignOrder.center}>
               <A hoverEffect={true} size={ASize.m} weight={AWeight.l}>
@@ -42,7 +48,6 @@ const Header = () => {
               </A>
             </ListItem>
           </List>
-
           <List align={ListAlignOrder.center}>
             {me != null ? (
               <>
@@ -63,7 +68,7 @@ const Header = () => {
               </ListItem>
             )}
           </List>
-        </Styled.HeaderRightContainer>
+        </Box>
       </Container>
     </Styled.HeaderContainer>
   );

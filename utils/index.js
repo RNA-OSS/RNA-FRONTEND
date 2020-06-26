@@ -1,4 +1,5 @@
-export function CalculateBox(targetArr) {
+//컴포넌트로 입력받은 padding과 margin으로 입력된 값을 설정한다.
+export const CalculateBox = (targetArr) => {
   let resultArr = [targetArr[0], targetArr[0], targetArr[0], targetArr[0]];
 
   if (targetArr.length === 2) {
@@ -17,4 +18,13 @@ export function CalculateBox(targetArr) {
   }
 
   return `${resultArr.toString().replace(/,/gi, "rem ")}rem`;
-}
+};
+
+export const CalculateFlexAttribute = (targetArr) => {
+  let resultString = `${targetArr[0]}`;
+
+  if (targetArr.length > 2) {
+    resultString = `${targetArr.toString().replace(/,/gi, " ")}`;
+  }
+  return resultString;
+};

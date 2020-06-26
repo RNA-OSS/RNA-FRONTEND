@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <ClubLayout>
+      {/* <ClubLayout>
         <Notice />
-      </ClubLayout>
+      </ClubLayout> */}
     </div>
   );
 };
