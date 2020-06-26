@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "./style";
-import { CalculateBox, CalculateFlexAttribute } from "./../../../utils";
+import { CalculateBox, CalculateFlexAttribute } from "../../../utils";
 
 export const BoxDirection = {
   ROW: "row",

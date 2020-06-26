@@ -2,6 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "./style";
+import { CalculateBox } from "../../../utils";
 import {
   WEIGHT_S,
   WEIGHT_M,
@@ -40,15 +41,17 @@ const Title = ({
   size = TitleSize.s,
   weight = TitleWeight.m,
   type = TitleType.normal,
-  marginBottom = "0px",
+  mar = [0],
   ellipsis = false,
 }) => {
+  const margin = CalculateBox(mar);
+
   return (
     <Styled.Title
       size={size}
       weight={weight}
       type={type}
-      marginBottom={marginBottom}
+      margin={margin}
       ellipsis={ellipsis}
     >
       {children}
@@ -61,7 +64,7 @@ Title.propTypes = {
   size: propTypes.string,
   weight: propTypes.number,
   type: propTypes.string,
-  marginBottom: propTypes.string,
+  margin: propTypes.array,
   ellipsis: propTypes.bool,
 };
 

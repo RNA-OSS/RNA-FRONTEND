@@ -36,13 +36,17 @@ const Header = () => {
           height="100%"
           mar={[0, 0, 0, 3]}
         >
-          <List align={ListAlignOrder.center}>
-            <ListItem height="100%" margin="4rem" align={ItemAlignOrder.center}>
+          <List align={ListAlignOrder.center} height="inherit">
+            <ListItem
+              height="inherit"
+              margin="4rem"
+              align={ItemAlignOrder.center}
+            >
               <A hoverEffect={true} size={ASize.m} weight={AWeight.l}>
                 학교
               </A>
             </ListItem>
-            <ListItem height="100%" align={ItemAlignOrder.center}>
+            <ListItem height="inherit" align={ItemAlignOrder.center}>
               <A hoverEffect={true} size={ASize.m} weight={AWeight.l}>
                 동아리
               </A>

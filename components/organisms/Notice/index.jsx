@@ -8,12 +8,13 @@ import P, { PSize, PWeight, PType } from "../../atoms/P";
 import Image from "../../atoms/Image";
 import Button from "../../atoms/Button";
 import Group from "../../organisms/Group";
+import Box from "../../molecules/Box";
 
 const Notice = () => {
   return (
     <>
       <Styled.ContentTitle>공지사항</Styled.ContentTitle>
-      <Styled.NoticeContainer>
+      <Box>
         <Styled.NoticeImageContainer>
           <Image src="clubPromotion.jpg" fit />
           {/* <Mordal /> */}
@@ -25,11 +26,7 @@ const Notice = () => {
           shadow={true}
         >
           <ListItem width="100%" height="auto">
-            <Title
-              size={TitleSize.s}
-              weight={TitleWeight.l}
-              marginBottom="2rem"
-            >
+            <Title size={TitleSize.s} weight={TitleWeight.l} mar={[0, 0, 2, 0]}>
               😁대학 연합 여행동아리 APM 신입 부원을 모집합니다!!😁
             </Title>
           </ListItem>
@@ -127,7 +124,7 @@ const Notice = () => {
               <br />
               * 문자문의 010-4118-9171 *<br />
               * 카톡문의 realrain0 *<br />
-              *APM 카페{" "}
+              *APM 카페
               <a
                 href="http://cafe.daum.net/APMFAM/WVSz/53"
                 target="_blank"
@@ -143,7 +140,7 @@ const Notice = () => {
             </Button>
           </ListItem>
         </List>
-      </Styled.NoticeContainer>
+      </Box>
       <Styled.ContentTitle>소모임</Styled.ContentTitle>
       <Group />
     </>

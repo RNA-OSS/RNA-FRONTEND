@@ -68,7 +68,6 @@ const Group = () => {
         shadow={true}
         key={data.id}
       >
-        {" "}
         <ListItem self={ItemSelfOrder.start}>
           <Styled.GroupState>{data.dDay}</Styled.GroupState>
         </ListItem>
@@ -76,11 +75,10 @@ const Group = () => {
           <Title size={TitleSize.s} weight={TitleWeight.l}>
             {data.title}
           </Title>
-          <Styled.GroupTitleBorder />
         </ListItem>
         <ListItem width="100%">
           <Box direction={BoxDirection.COL} pad={["2"]}>
-            <Box sort={BoxSort.SPACE_BETWEEN_LEFT}>
+            <Box sort={BoxSort.CENTER_SPACE_BETWEEN}>
               <Span size={SpanSize.s} type={SpanType.gray}>
                 멘토
               </Span>
@@ -88,7 +86,7 @@ const Group = () => {
                 {data.mentor}
               </Span>
             </Box>
-            <Box sort={BoxSort.SPACE_BETWEEN_LEFT}>
+            <Box sort={BoxSort.CENTER_SPACE_BETWEEN}>
               <Span size={SpanSize.s} type={SpanType.gray}>
                 모집인원
               </Span>
@@ -96,7 +94,7 @@ const Group = () => {
                 {data.heads}/{data.maxHeads}
               </Span>
             </Box>
-            <Box sort={BoxSort.SPACE_BETWEEN_LEFT}>
+            <Box sort={BoxSort.CENTER_SPACE_BETWEEN}>
               <Span size={SpanSize.s} type={SpanType.gray}>
                 활동기간
               </Span>
@@ -106,8 +104,8 @@ const Group = () => {
             </Box>
           </Box>
         </ListItem>
-        <ListItem>
-          <Button width="200px" height="40px">
+        <ListItem width="100%" justify={ItemJustifyOrder.center}>
+          <Button width="60%" height="40px">
             지원하기
           </Button>
         </ListItem>

@@ -23,7 +23,7 @@ const SignIn = () => {
 
   return (
     <Styled.SignContainer>
-      <Title size={TitleSize.m} weight={TitleWeight.m} marginBottom="4rem">
+      <Title size={TitleSize.m} weight={TitleWeight.m} mar={[0, 0, 4, 0]}>
         이메일<span>로 로그인하세요</span>
       </Title>
       <SignInForm />

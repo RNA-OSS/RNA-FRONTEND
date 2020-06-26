@@ -7,12 +7,6 @@ const NOTICE_IMAGE_HEIGHT = "472px";
 
 const INTERVAL = "30px";
 
-export const NoticeContainer = styled.section`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-`;
-
 export const ContentTitle = styled.h2`
   align-self: flex-start;
   font-weight: 700;
