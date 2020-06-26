@@ -2,10 +2,7 @@ import React from "react";
 
 import * as Styled from "./style";
 import List, { ListDirection, ListSort } from "../../molecules/List";
-import ListItem, {
-  ItemSelfOrder,
-  ItemJustifyOrder,
-} from "../../molecules/ListItem";
+import ListItem, { ItemSelfSort, ItemSort } from "../../molecules/ListItem";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
 import Span, { SpanType, SpanSize } from "../../atoms/Span";
 import Button from "../../atoms/Button";
@@ -58,15 +55,15 @@ const Group = () => {
         sort={ListSort.SPACE_BETWEEN_CENTER}
         width="32%"
         height="393px"
-        margin={[0, 0, 2, 0]}
+        mar={[0, 0, 2, 0]}
         card={true}
         shadow={true}
         key={data.id}
       >
-        <ListItem self={ItemSelfOrder.start}>
+        <ListItem self={ItemSelfSort.START}>
           <Styled.GroupState>{data.dDay}</Styled.GroupState>
         </ListItem>
-        <ListItem width="100%" justify={ItemJustifyOrder.center}>
+        <ListItem width="100%" sort={ItemSort.TOP_CENTER}>
           <Title size={TitleSize.s} weight={TitleWeight.l}>
             {data.title}
           </Title>
@@ -99,7 +96,7 @@ const Group = () => {
             </Box>
           </Box>
         </ListItem>
-        <ListItem width="100%" justify={ItemJustifyOrder.center}>
+        <ListItem width="100%" sort={ItemSort.TOP_CENTER}>
           <Button width="60%" height="40px">
             지원하기
           </Button>

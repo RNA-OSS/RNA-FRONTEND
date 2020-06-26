@@ -3,11 +3,7 @@ import React from "react";
 import * as Styled from "./style";
 import ClubMenu from "../ClubMenu";
 import List, { ListDirection, ListSort } from "../../molecules/List";
-import ListItem, {
-  ItemDirection,
-  ItemAlignOrder,
-  ItemJustifyOrder,
-} from "../../molecules/ListItem";
+import ListItem, { ItemDirection, ItemSort } from "../../molecules/ListItem";
 import Image, { Type } from "../../atoms/Image";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
 import Span, { SpanSize, SpanWeight, SpanType } from "../../atoms/Span";
@@ -31,7 +27,7 @@ const ClubNavigation = () => {
         width="100%"
         mar={[0, 0, 2, 0]}
       >
-        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+        <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
           <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             동아리 회장
           </Span>
@@ -39,7 +35,7 @@ const ClubNavigation = () => {
             {dummyData.leader}
           </Span>
         </ListItem>
-        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+        <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
           <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             인원수
           </Span>
@@ -47,7 +43,7 @@ const ClubNavigation = () => {
             {dummyData.heads}
           </Span>
         </ListItem>
-        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+        <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
           <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             누적인원
           </Span>
@@ -55,7 +51,7 @@ const ClubNavigation = () => {
             {dummyData.totalHeads}
           </Span>
         </ListItem>
-        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+        <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
           <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             설립일
           </Span>
@@ -63,7 +59,7 @@ const ClubNavigation = () => {
             {dummyData.founded}
           </Span>
         </ListItem>
-        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+        <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
           <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             기수
           </Span>
@@ -71,7 +67,7 @@ const ClubNavigation = () => {
             {dummyData.numeral}
           </Span>
         </ListItem>
-        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+        <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
           <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             장소
           </Span>
@@ -86,7 +82,7 @@ const ClubNavigation = () => {
   return (
     <>
       <List width="100%" direction={ListDirection.COL}>
-        <ListItem direction={ItemDirection.col} align={ItemAlignOrder.center}>
+        <ListItem direction={ItemDirection.COL} sort={ItemSort.TOP_CENTER}>
           <Image
             marginBottom="2rem"
             type={Type.img}

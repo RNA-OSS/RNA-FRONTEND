@@ -7,8 +7,8 @@ import { LOGOUT_REQUEST } from "../../../reducers/user";
 import Image, { Type } from "../../atoms/Image";
 import A, { ASize, AWeight } from "../../atoms/A";
 import Container from "../../molecules/Container";
-import List, { ListSort, ListDirection } from "../../molecules/List";
-import ListItem, { ItemAlignOrder } from "../../molecules/ListItem";
+import List, { ListSort } from "../../molecules/List";
+import ListItem, { ItemSort } from "../../molecules/ListItem";
 import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
 
 const Header = () => {
@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <Styled.HeaderContainer>
       <Container>
-        <Box flexAttr={[0, 1, "283px"]}>
+        <Box sort={BoxSort.CENTER_LEFT} flexAttr={[0, 1, "283px"]}>
           <Link href="/">
             <A>
               <Image src="Logo.svg" type={Type.img} />
@@ -38,15 +38,15 @@ const Header = () => {
         >
           <List sort={ListSort.CENTER_LEFT} height="inherit">
             <ListItem
+              sort={ItemSort.CENTER_LEFT}
               height="inherit"
-              margin="4rem"
-              align={ItemAlignOrder.center}
+              mar={[0, 4, 0, 0]}
             >
               <A hoverEffect={true} size={ASize.m} weight={AWeight.l}>
                 학교
               </A>
             </ListItem>
-            <ListItem height="inherit" align={ItemAlignOrder.center}>
+            <ListItem sort={ItemSort.CENTER_LEFT} height="inherit">
               <A hoverEffect={true} size={ASize.m} weight={AWeight.l}>
                 동아리
               </A>
@@ -55,15 +55,15 @@ const Header = () => {
           <List sort={ListSort.CENTER_LEFT}>
             {me != null ? (
               <>
-                <ListItem margin="2rem" align={ItemAlignOrder.center}>
+                <ListItem sort={ItemSort.CENTER_LEFT} mar={[0, 2, 0, 0]}>
                   <Styled.MyPageIcon />
                 </ListItem>
-                <ListItem align={ItemAlignOrder.center} onClick={onClickLogout}>
+                <ListItem sort={ItemSort.CENTER_LEFT} onClick={onClickLogout}>
                   <Styled.LogoutIcon />
                 </ListItem>
               </>
             ) : (
-              <ListItem align={ItemAlignOrder.center}>
+              <ListItem sort={ItemSort.CENTER_LEFT}>
                 <Link href="/SignPage/sign">
                   <a>
                     <Styled.LoginIcon />

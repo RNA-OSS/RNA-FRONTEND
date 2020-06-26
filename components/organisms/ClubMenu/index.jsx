@@ -3,10 +3,7 @@ import Link from "next/link";
 
 import * as Styled from "./style";
 import List, { ListDirection, ListSort } from "../../molecules/List";
-import ListItem, {
-  ItemAlignOrder,
-  ItemJustifyOrder,
-} from "../../molecules/ListItem";
+import ListItem, { ItemSort } from "../../molecules/ListItem";
 import A, { ASize, AWeight, AType } from "../../atoms/A";
 import Span, { SpanSize, SpanWeight, SpanType } from "../../atoms/Span";
 
@@ -60,7 +57,7 @@ const ClubMenu = () => {
     menuData.map((data) => (
       <React.Fragment key={data.id}>
         {data.type === "favorite" && (
-          <ListItem align={ItemJustifyOrder.center} height="24px">
+          <ListItem sort={ItemSort.CENTER_LEFT} height="24px">
             <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>
               <Styled.FavoriteIcon />
               {data.content}
@@ -68,14 +65,14 @@ const ClubMenu = () => {
           </ListItem>
         )}
         {data.type === "class" && (
-          <ListItem align={ItemAlignOrder.center} height="24px">
+          <ListItem sort={ItemSort.CENTER_LEFT} height="24px">
             <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>
               # {data.content}
             </Span>
           </ListItem>
         )}
         {data.type === "general" && (
-          <ListItem align={ItemAlignOrder.center} height="20px">
+          <ListItem sort={ItemSort.CENTER_LEFT} height="24px">
             <A size={ASize.s} weight={AWeight.m} type={AType.gray}>
               <Styled.ArrowIcon />
               {data.content}

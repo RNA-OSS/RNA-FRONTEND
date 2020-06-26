@@ -2,7 +2,7 @@ import React from "react";
 
 import * as Styled from "./style";
 import List, { ListDirection } from "../../molecules/List";
-import ListItem, { ItemSelfOrder } from "../../molecules/ListItem";
+import ListItem, { ItemSelfSort } from "../../molecules/ListItem";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
 import P, { PSize, PWeight, PType } from "../../atoms/P";
 import Image from "../../atoms/Image";
@@ -134,7 +134,7 @@ const Notice = () => {
               </a>
             </P>
           </Styled.NoticeInformationText>
-          <ListItem width="100%" self={ItemSelfOrder.center}>
+          <ListItem width="100%" self={ItemSelfSort.CENTER}>
             <Button width="40%" height="40px">
               가입신청
             </Button>
