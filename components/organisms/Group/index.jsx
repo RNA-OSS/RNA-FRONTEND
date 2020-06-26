@@ -13,6 +13,7 @@ import ListItem, {
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
 import Span, { SpanType, SpanSize } from "../../atoms/Span";
 import Button from "../../atoms/Button";
+import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
 
 const dummyGroups = [
   {
@@ -65,6 +66,7 @@ const Group = () => {
         margin="2rem"
         card={true}
         shadow={true}
+        key={data.id}
       >
         {" "}
         <ListItem self={ItemSelfOrder.start}>
@@ -77,32 +79,32 @@ const Group = () => {
           <Styled.GroupTitleBorder />
         </ListItem>
         <ListItem width="100%">
-          <Styled.GroupInformationList>
-            <ListItem width="100%" justify={ItemJustifyOrder.between}>
+          <Box direction={BoxDirection.COL} pad={["2"]}>
+            <Box sort={BoxSort.SPACE_BETWEEN_LEFT}>
               <Span size={SpanSize.s} type={SpanType.gray}>
                 멘토
               </Span>
               <Span size={SpanSize.s} type={SpanType.gray} marginBottom="2rem">
                 {data.mentor}
               </Span>
-            </ListItem>
-            <ListItem width="100%" justify={ItemJustifyOrder.between}>
+            </Box>
+            <Box sort={BoxSort.SPACE_BETWEEN_LEFT}>
               <Span size={SpanSize.s} type={SpanType.gray}>
                 모집인원
               </Span>
               <Span size={SpanSize.s} type={SpanType.gray} marginBottom="2rem">
                 {data.heads}/{data.maxHeads}
               </Span>
-            </ListItem>
-            <ListItem width="100%" justify={ItemJustifyOrder.between}>
+            </Box>
+            <Box sort={BoxSort.SPACE_BETWEEN_LEFT}>
               <Span size={SpanSize.s} type={SpanType.gray}>
                 활동기간
               </Span>
               <Span size={SpanSize.s} type={SpanType.gray} marginBottom="2rem">
                 {data.period}
               </Span>
-            </ListItem>
-          </Styled.GroupInformationList>
+            </Box>
+          </Box>
         </ListItem>
         <ListItem>
           <Button width="200px" height="40px">

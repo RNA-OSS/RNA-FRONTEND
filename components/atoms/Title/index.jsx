@@ -11,8 +11,8 @@ import {
   TITLE_S,
   TITLE_M,
   TITLE_L,
-} from "../../../public/font";
-import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../public/color";
+} from "../../../assets/font";
+import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../assets/color";
 
 export const TitleType = {
   normal: BLACK,

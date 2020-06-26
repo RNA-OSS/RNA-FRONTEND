@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-import { BG_COLOR } from "../../../public/color";
+import { BG_COLOR } from "../../../assets/color";
 
 const NAV_WIDTH = "210px";
 
 export const ClubContainer = styled.div`
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   background-color: ${BG_COLOR};
   display: flex;
   justify-content: center;

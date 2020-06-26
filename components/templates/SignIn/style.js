@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MAIN_COLOR } from "../../../public/color";
+import { MAIN_COLOR } from "../../../assets/color";
 
 const FORM_WIDTH = "418px";
 

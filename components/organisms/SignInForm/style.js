@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DARK_GRAY } from "../../../public/color";
+import { DARK_GRAY } from "../../../assets/color";
 
 export const SignForm = styled.form`
   display: flex;

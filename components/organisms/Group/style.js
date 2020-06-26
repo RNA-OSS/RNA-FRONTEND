@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { WARNING, WHITE, LIGHT_GRAY } from "../../../public/color";
+import { WARNING, WHITE, LIGHT_GRAY } from "../../../assets/color";
 
 export const GroupContainer = styled.section`
   display: flex;

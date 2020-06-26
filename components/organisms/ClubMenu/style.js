@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { StarFilled, ArrowRightOutlined } from "@ant-design/icons";
 
-import { MAIN_COLOR } from "../../../public/color";
-import { TEXT_M, TEXT_S } from "../../../public/font";
+import { MAIN_COLOR } from "../../../assets/color";
+import { TEXT_M, TEXT_S } from "../../../assets/font";
 
 export const FavoriteIcon = styled(StarFilled)`
   color: ${MAIN_COLOR};

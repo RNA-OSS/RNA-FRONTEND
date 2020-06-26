@@ -58,7 +58,7 @@ const menuItems = [
 const ClubMenu = () => {
   let renderMenuList = (menuData) =>
     menuData.map((data) => (
-      <React.Fragment>
+      <React.Fragment key={data.id}>
         {data.type === "favorite" && (
           <ListItem align={ItemJustifyOrder.center} height="24px">
             <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>

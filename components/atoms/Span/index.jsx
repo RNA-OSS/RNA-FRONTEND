@@ -9,8 +9,8 @@ import {
   TEXT_S,
   TEXT_M,
   TEXT_L,
-} from "../../../public/font";
-import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../public/color";
+} from "../../../assets/font";
+import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../assets/color";
 
 export const SpanType = {
   normal: BLACK,
@@ -52,7 +52,7 @@ const Span = ({
 };
 
 Span.propTypes = {
-  children: propTypes.string,
+  children: propTypes.node.isRequired,
   size: propTypes.string,
   weight: propTypes.number,
   type: propTypes.string,

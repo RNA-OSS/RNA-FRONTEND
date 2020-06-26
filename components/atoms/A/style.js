@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { MAIN_COLOR } from "../../../public/color";
+import { MAIN_COLOR } from "../../../assets/color";
 
 export const HoverEffect = css`
   position: relative;

@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
-import BG from "../../public/assets/images/pattern.svg";
-import { WHITE } from "../../public/color";
+import BG from "../../assets/images/pattern.svg";
+import { WHITE } from "../../assets/color";
 
 const BG_WIDTH = "776px";
 const BG_HEIGHT = "780px";

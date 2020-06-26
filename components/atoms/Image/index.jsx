@@ -15,7 +15,7 @@ const Image = ({
   type = Type.img,
   fit = false,
 }) => {
-  const srcPath = "/assets/images/" + src;
+  const srcPath = "../../../assets/images/" + src;
 
   return (
     <>

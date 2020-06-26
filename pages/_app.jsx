@@ -3,11 +3,11 @@ import Head from "next/head";
 import propTypes from "prop-types";
 
 import wrapper from "../store/configureStore";
-import { GlobalStyle } from "../public/reset";
+import { GlobalStyle } from "../assets/reset";
 
 const RNA = ({ Component }) => {
   return (
-    <> 
+    <>
       <Head>
         <title>RNA</title>
         <link
