@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { NORMAL_GRAY, DARK_GRAY, MAIN_COLOR } from "../../../assets/color";
-import { TEXT_S } from "../../../assets/font";
+import { NORMAL_GRAY, DARK_GRAY, MAIN_COLOR } from "../../../public/color";
+import { TEXT_S } from "../../../public/font";
 
 export const Input = styled.input`
   background-image: none;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { BLACK, DARK_GRAY, MAIN_COLOR } from "../../../assets/color";
-import { TEXT_M, TEXT_L } from "../../../assets/font";
+import { BLACK, DARK_GRAY, MAIN_COLOR } from "../../../public/color";
+import { TEXT_M, TEXT_L } from "../../../public/font";
 
 const NOTICE_IMAGE_WIDTH = "336px";
 const NOTICE_IMAGE_HEIGHT = "472px";

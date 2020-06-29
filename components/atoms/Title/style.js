@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { DARK_GRAY } from "../../../assets/color";
+import { DARK_GRAY } from "../../../public/color";
 
 export const Title = styled.h1`
   font-size: ${(props) => props.size};

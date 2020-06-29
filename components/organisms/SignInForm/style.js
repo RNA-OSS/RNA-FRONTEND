@@ -1,12 +1,5 @@
 import styled from "styled-components";
-import { DARK_GRAY } from "../../../assets/color";
-
-export const SignForm = styled.form`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-`;
+import { DARK_GRAY } from "../../../public/color";
 
 export const InputContainer = styled.div`
   position: relative;

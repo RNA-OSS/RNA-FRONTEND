@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { MAIN_COLOR, LIGHT_MAIN_COLOR, WHITE } from "../../../assets/color";
-import { TEXT_M } from "../../../assets/font";
+import { MAIN_COLOR, LIGHT_MAIN_COLOR, WHITE } from "../../../public/color";
+import { TEXT_M } from "../../../public/font";
 
 export const Button = styled.button`
   width: ${(props) => props.width};

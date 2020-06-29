@@ -3,6 +3,7 @@ import React from "react";
 import * as Styled from "./style";
 import Input from "../../atoms/Input";
 import Button from "../../atoms/Button";
+import Box, { BoxDirection } from "../../molecules/Box";
 
 import useInput from "../../../hooks/useInput";
 
@@ -11,7 +12,7 @@ const SignInForm = () => {
   const [password, onChangePassword] = useInput("");
 
   return (
-    <Styled.SignForm>
+    <Box direction={BoxDirection.COL}>
       <Styled.InputContainer>
         <label htmlFor="input-email">이메일</label>
         <Input
@@ -36,7 +37,7 @@ const SignInForm = () => {
       <Button width="100%" height="60px">
         로그인
       </Button>
-    </Styled.SignForm>
+    </Box>
   );
 };
 

@@ -4,6 +4,7 @@ import * as Styled from "./style";
 import * as SingStyled from "../SignInForm/style";
 import Input from "../../atoms/Input";
 import Button from "../../atoms/Button";
+import Box, { BoxDirection } from "../../molecules/Box";
 
 import useInput from "../../../hooks/useInput";
 
@@ -108,7 +109,7 @@ const SignUpForm = () => {
   }, [passwordCheck, password]);
 
   return (
-    <SingStyled.SignForm>
+    <Box direction={BoxDirection.COL}>
       {/* 이메일 */}
       <SingStyled.InputContainer>
         <label htmlFor="input-email">이메일</label>
@@ -190,7 +191,7 @@ const SignUpForm = () => {
       <Button width="100%" height="60px">
         회원가입
       </Button>
-    </SingStyled.SignForm>
+    </Box>
   );
 };
 

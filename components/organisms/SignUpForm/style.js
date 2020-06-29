@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DARK_GRAY, MAIN_COLOR, WARNING } from "../../../assets/color";
+import { MAIN_COLOR, WARNING } from "../../../public/color";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 
 export const CheckContainer = styled.div`

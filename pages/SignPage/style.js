@@ -1,23 +1,9 @@
 import styled, { keyframes, css } from "styled-components";
-import BG from "../../assets/images/pattern.svg";
-import { WHITE } from "../../assets/color";
+import BG from "../../public/images/pattern.svg";
+import { WHITE } from "../../public/color";
 
 const BG_WIDTH = "776px";
 const BG_HEIGHT = "780px";
-
-export const SignView = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-`;
-
-export const RightContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 100vh;
-`;
 
 export const SignBackground = styled.div`
   width: ${BG_WIDTH};

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { WHITE } from "../../../assets/color";
+import { WHITE } from "../../../public/color";
 
 const Card = css`
   background-color: ${WHITE};

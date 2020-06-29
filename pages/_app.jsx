@@ -3,7 +3,7 @@ import Head from "next/head";
 import propTypes from "prop-types";
 
 import wrapper from "../store/configureStore";
-import { GlobalStyle } from "../assets/reset";
+import { GlobalStyle } from "../public/reset";
 
 const RNA = ({ Component }) => {
   return (

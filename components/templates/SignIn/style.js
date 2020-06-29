@@ -1,15 +1,5 @@
 import styled from "styled-components";
-import { MAIN_COLOR } from "../../../assets/color";
-
-const FORM_WIDTH = "418px";
-
-export const SignContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: ${FORM_WIDTH};
-`;
+import { MAIN_COLOR } from "../../../public/color";
 
 export const SignMenu = styled.div`
   display: flex;

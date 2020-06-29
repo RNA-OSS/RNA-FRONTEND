@@ -9,8 +9,8 @@ import {
   TEXT_S,
   TEXT_M,
   TEXT_L,
-} from "../../../assets/font";
-import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../assets/color";
+} from "../../../public/font";
+import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../public/color";
 
 export const SpanType = {
   normal: BLACK,

@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { UserOutlined, LoginOutlined, LogoutOutlined } from "@ant-design/icons";
 
-import { WHITE, BLACK } from "../../../assets/color";
-import { TEXT_L } from "../../../assets/font";
+import { WHITE, BLACK } from "../../../public/color";
+import { TEXT_L } from "../../../public/font";
 
 const NAV_WIDTH = "283px";
 const INTERVAL = "3rem";

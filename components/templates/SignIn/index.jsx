@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { SIGN_UP } from "../../../reducers/sign";
 import { LOGIN_REQUEST } from "../../../reducers/user";
 import A, { ASize, AWeight, AType } from "../../atoms/A";
+import Box, { BoxDirection } from "../../molecules/Box";
 
 const SignIn = () => {
   const dispatch = useDispatch();
@@ -22,8 +23,8 @@ const SignIn = () => {
   }, []);
 
   return (
-    <Styled.SignContainer>
-      <Title size={TitleSize.m} weight={TitleWeight.m} mar={[0, 0, 4, 0]}>
+    <Box direction={BoxDirection.COL} width="418px">
+      <Title size={TitleSize.m} weight={TitleWeight.l} mar={[0, 0, 4, 0]}>
         이메일<span>로 로그인하세요</span>
       </Title>
       <SignInForm />
@@ -40,7 +41,7 @@ const SignIn = () => {
           회원가입
         </A>
       </Styled.SignMenu>
-    </Styled.SignContainer>
+    </Box>
   );
 };
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BG_COLOR } from "../../../assets/color";
+import { BG_COLOR } from "../../../public/color";
 
 const NAV_WIDTH = "210px";
 
