@@ -2,14 +2,14 @@ import React from "react";
 
 import Header from "../../components/organisms/Header";
 import ClubLayout from "../../components/templates/ClubLayout";
-import Table from "../../components/molecules/Table";
+import Board from "../../components/organisms/Board";
 
 const board = () => {
   return (
     <div>
       <Header />
       <ClubLayout>
-        <Table />
+        <Board />
       </ClubLayout>
     </div>
   );

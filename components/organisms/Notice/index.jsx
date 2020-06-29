@@ -13,7 +13,9 @@ import Box from "../../molecules/Box";
 const Notice = () => {
   return (
     <>
-      <Styled.ContentTitle>공지사항</Styled.ContentTitle>
+      <Title size={TitleSize.xs} weight={TitleWeight.l} mar={[2, 0, 2, 2]}>
+        공지사항
+      </Title>
       <Box>
         <Styled.NoticeImageContainer>
           <Image src="clubPromotion.jpg" fit />
@@ -141,7 +143,9 @@ const Notice = () => {
           </ListItem>
         </List>
       </Box>
-      <Styled.ContentTitle>소모임</Styled.ContentTitle>
+      <Title size={TitleSize.xs} weight={TitleWeight.l} mar={[2, 0, 2, 2]}>
+        소모임
+      </Title>
       <Group />
     </>
   );

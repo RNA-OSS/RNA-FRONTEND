@@ -23,7 +23,11 @@ const Header = () => {
     <Styled.HeaderContainer>
       <Container>
         <Box sort={BoxSort.CENTER_LEFT} flexAttr={[0, 1, "283px"]}>
-          <Image src="Logo.svg" type={Type.img} />
+          <Link href="/">
+            <a>
+              <Image src="Logo.svg" type={Type.img} />
+            </a>
+          </Link>
         </Box>
 
         <Box

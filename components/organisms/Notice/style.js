@@ -1,23 +1,14 @@
 import styled from "styled-components";
-import { BLACK, DARK_GRAY, MAIN_COLOR } from "../../../public/color";
-import { TEXT_M, TEXT_L } from "../../../public/font";
+import { BLACK, MAIN_COLOR } from "../../../public/color";
+import { TEXT_M } from "../../../public/font";
 
 const NOTICE_IMAGE_WIDTH = "336px";
 const NOTICE_IMAGE_HEIGHT = "472px";
 
 const INTERVAL = "30px";
 
-export const ContentTitle = styled.h2`
-  align-self: flex-start;
-  font-weight: 700;
-  color: ${BLACK};
-  font-size: ${TEXT_M};
-  padding: 20px 0 20px 20px;
-  margin: 0;
-`;
-
 export const NoticeImageContainer = styled.div`
-  flex: 0 0 ${NOTICE_IMAGE_WIDTH};
+  flex: 1 0 ${NOTICE_IMAGE_WIDTH};
   height: ${NOTICE_IMAGE_HEIGHT};
   overflow: hidden;
   border-radius: 10px;
