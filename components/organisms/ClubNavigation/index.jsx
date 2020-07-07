@@ -6,7 +6,7 @@ import List, { ListDirection, ListSort } from "../../molecules/List";
 import ListItem, { ItemDirection, ItemSort } from "../../molecules/ListItem";
 import Image, { Type } from "../../atoms/Image";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
-import Span, { SpanSize, SpanWeight, SpanType } from "../../atoms/Span";
+import Span, { SpanSize, SpanWeight, SpanColor } from "../../atoms/Span";
 
 const dummyData = {
   leader: "조재권",
@@ -28,50 +28,50 @@ const ClubNavigation = () => {
         mar={[0, 0, 2, 0]}
       >
         <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             동아리 회장
           </Span>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             {dummyData.leader}
           </Span>
         </ListItem>
         <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             인원수
           </Span>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             {dummyData.heads}
           </Span>
         </ListItem>
         <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             누적인원
           </Span>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             {dummyData.totalHeads}
           </Span>
         </ListItem>
         <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             설립일
           </Span>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             {dummyData.founded}
           </Span>
         </ListItem>
         <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             기수
           </Span>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             {dummyData.numeral}
           </Span>
         </ListItem>
         <ListItem width="inherit" sort={ItemSort.CENTER_SPACE_BETWEEN}>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             장소
           </Span>
-          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
+          <Span size={SpanSize.S} weight={SpanWeight.M} color={SpanColor.GRAY}>
             {dummyData.place}
           </Span>
         </ListItem>
@@ -81,7 +81,7 @@ const ClubNavigation = () => {
 
   return (
     <>
-      <List width="100%" direction={ListDirection.COL}>
+      <List width="100%" direction={ListDirection.COL} mar={[3, 0, 0, 0]}>
         <ListItem direction={ItemDirection.COL} sort={ItemSort.TOP_CENTER}>
           <Image
             marginBottom="2rem"
@@ -93,10 +93,10 @@ const ClubNavigation = () => {
             동국대학교
           </Title>
           <Span
-            size={SpanSize.s}
-            weight={SpanWeight.l}
-            type={SpanType.gray}
-            marginBottom="2rem"
+            size={SpanSize.S}
+            weight={SpanWeight.L}
+            color={SpanColor.GRAY}
+            mar={[0, 0, 2, 0]}
           >
             DNA
           </Span>

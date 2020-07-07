@@ -3,17 +3,25 @@ import propTypes from "prop-types";
 
 import * as Styled from "./style";
 import Container from "../../molecules/Container";
+import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
 import ClubNavigation from "../../organisms/ClubNavigation";
 
 const ClubLayout = ({ children }) => {
   return (
     <Styled.ClubContainer>
       <Container>
-        <Styled.NavContainer>
+        <Box
+          direction={BoxDirection.COL}
+          sort={BoxSort.TOP_CENTER}
+          mar={[0, 3, 0, 0]}
+          flexAttr={[1, 0, "210px"]}
+        >
           <ClubNavigation />
-        </Styled.NavContainer>
+        </Box>
 
-        <Styled.ContentContainer>{children}</Styled.ContentContainer>
+        <Box sort={BoxSort.TOP_CENTER} direction={BoxDirection.COL}>
+          {children}
+        </Box>
       </Container>
     </Styled.ClubContainer>
   );

@@ -70,10 +70,12 @@ const List = ({
 
 List.propTypes = {
   children: propTypes.node.isRequired,
+  direction: propTypes.string,
   width: propTypes.string,
   height: propTypes.string,
-  direction: propTypes.string,
-  margin: propTypes.array,
+  sort: propTypes.number,
+  mar: propTypes.array,
+  pad: propTypes.array,
   card: propTypes.bool,
   shadow: propTypes.bool,
 };

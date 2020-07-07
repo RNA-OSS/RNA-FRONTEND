@@ -22,12 +22,6 @@ export const GroupState = styled.span`
   margin-bottom: 10px;
 `;
 
-export const GroupTitleBorder = styled.span`
-  width: 100%;
-  height: 1px;
-  background-color: LIGHT_GRAY;
-`;
-
 export const GroupInformationList = styled.ul`
   display: flex;
   width: 100%;

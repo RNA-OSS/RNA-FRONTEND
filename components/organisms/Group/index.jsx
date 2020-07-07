@@ -4,9 +4,9 @@ import * as Styled from "./style";
 import List, { ListDirection, ListSort } from "../../molecules/List";
 import ListItem, { ItemSelfSort, ItemSort } from "../../molecules/ListItem";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
-import Span, { SpanType, SpanSize } from "../../atoms/Span";
+import Span, { SpanSize, SpanColor } from "../../atoms/Span";
 import Button from "../../atoms/Button";
-import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
+import Box, { BoxDirection, BoxSort, BoxWrap } from "../../molecules/Box";
 
 const dummyGroups = [
   {
@@ -70,27 +70,27 @@ const Group = () => {
         </ListItem>
         <ListItem width="100%">
           <Box direction={BoxDirection.COL} pad={["2"]}>
-            <Box sort={BoxSort.CENTER_SPACE_BETWEEN}>
-              <Span size={SpanSize.s} type={SpanType.gray}>
+            <Box sort={BoxSort.CENTER_SPACE_BETWEEN} mar={[0, 0, 2, 0]}>
+              <Span size={SpanSize.S} color={SpanColor.GRAY}>
                 멘토
               </Span>
-              <Span size={SpanSize.s} type={SpanType.gray} marginBottom="2rem">
+              <Span size={SpanSize.S} color={SpanColor.GRAY}>
                 {data.mentor}
               </Span>
             </Box>
-            <Box sort={BoxSort.CENTER_SPACE_BETWEEN}>
-              <Span size={SpanSize.s} type={SpanType.gray}>
+            <Box sort={BoxSort.CENTER_SPACE_BETWEEN} mar={[0, 0, 2, 0]}>
+              <Span size={SpanSize.S} color={SpanColor.GRAY}>
                 모집인원
               </Span>
-              <Span size={SpanSize.s} type={SpanType.gray} marginBottom="2rem">
+              <Span size={SpanSize.S} color={SpanColor.GRAY}>
                 {data.heads}/{data.maxHeads}
               </Span>
             </Box>
-            <Box sort={BoxSort.CENTER_SPACE_BETWEEN}>
-              <Span size={SpanSize.s} type={SpanType.gray}>
+            <Box sort={BoxSort.CENTER_SPACE_BETWEEN} mar={[0, 0, 2, 0]}>
+              <Span size={SpanSize.S} color={SpanColor.GRAY}>
                 활동기간
               </Span>
-              <Span size={SpanSize.s} type={SpanType.gray} marginBottom="2rem">
+              <Span size={SpanSize.S} color={SpanColor.GRAY}>
                 {data.period}
               </Span>
             </Box>
@@ -105,9 +105,9 @@ const Group = () => {
     ));
 
   return (
-    <Styled.GroupContainer>
+    <Box wrap={BoxWrap.WRAP} sort={BoxSort.CENTER_SPACE_BETWEEN}>
       {renderGroupItem(dummyGroups)}
-    </Styled.GroupContainer>
+    </Box>
   );
 };
 

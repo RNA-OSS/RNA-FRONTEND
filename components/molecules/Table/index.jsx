@@ -1,11 +1,12 @@
 import React from "react";
+import propTypes from "prop-types";
 
 import * as Styled from "./style";
 import Tr from "../Tr";
 import Th from "../Th";
 import Td, { TextAlign } from "../Td";
 
-const Table = ({ headData, bodyData }) => {
+const Table = ({ headData, bodyData, hover = false }) => {
   let renderTableHeadData = () =>
     headData.map((data, i) => (
       <Th key={i} pad={[2, 0]} width={data.width}>
@@ -24,13 +25,19 @@ const Table = ({ headData, bodyData }) => {
     ));
 
   return (
-    <Styled.Table>
+    <Styled.Table hover={hover}>
       <thead>
         <Tr>{renderTableHeadData()}</Tr>
       </thead>
       <tbody>{renderTableBodyData()}</tbody>
     </Styled.Table>
   );
+};
+
+Table.prototype = {
+  headData: propTypes.array,
+  bodyData: propTypes.array,
+  hover: propTypes.bool,
 };
 
 export default Table;

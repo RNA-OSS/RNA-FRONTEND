@@ -8,14 +8,16 @@ import P, { PSize, PWeight, PType } from "../../atoms/P";
 import Image from "../../atoms/Image";
 import Button from "../../atoms/Button";
 import Group from "../../organisms/Group";
-import Box from "../../molecules/Box";
+import Box, { BoxSort } from "../../molecules/Box";
 
 const Notice = () => {
   return (
-    <>
-      <Title size={TitleSize.xs} weight={TitleWeight.l} mar={[2, 0, 2, 2]}>
-        공지사항
-      </Title>
+    <React.Fragment>
+      <Box sort={BoxSort.CENTER_LEFT}>
+        <Title size={TitleSize.xs} weight={TitleWeight.l} mar={[2, 0, 2, 2]}>
+          공지사항
+        </Title>
+      </Box>
       <Box>
         <Styled.NoticeImageContainer>
           <Image src="clubPromotion.jpg" fit />
@@ -143,11 +145,13 @@ const Notice = () => {
           </ListItem>
         </List>
       </Box>
-      <Title size={TitleSize.xs} weight={TitleWeight.l} mar={[2, 0, 2, 2]}>
-        소모임
-      </Title>
+      <Box sort={BoxSort.CENTER_LEFT}>
+        <Title size={TitleSize.xs} weight={TitleWeight.l} mar={[2, 0, 2, 2]}>
+          소모임
+        </Title>
+      </Box>
       <Group />
-    </>
+    </React.Fragment>
   );
 };
 

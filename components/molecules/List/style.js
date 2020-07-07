@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { WHITE } from "../../../public/color";
+import { WHITE, MAIN_COLOR } from "../../../public/color";
 
 const Card = css`
   background-color: ${WHITE};
@@ -9,7 +9,10 @@ const Card = css`
 `;
 
 const CardShadow = css`
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 5px 5px 0 ${MAIN_COLOR};
+  }
 `;
 
 export const List = styled.ul`

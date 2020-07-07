@@ -13,4 +13,5 @@ export const Box = styled.div`
   padding: ${(props) => props.padding};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
+  flex-wrap: ${(props) => props.wrap};
 `;

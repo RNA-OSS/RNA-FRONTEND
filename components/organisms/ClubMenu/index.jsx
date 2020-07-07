@@ -5,7 +5,7 @@ import * as Styled from "./style";
 import List, { ListDirection, ListSort } from "../../molecules/List";
 import ListItem, { ItemSort } from "../../molecules/ListItem";
 import A, { ASize, AWeight, AType } from "../../atoms/A";
-import Span, { SpanSize, SpanWeight, SpanType } from "../../atoms/Span";
+import Span, { SpanSize, SpanWeight, SpanColor } from "../../atoms/Span";
 
 const menuItems = [
   {
@@ -58,7 +58,7 @@ const ClubMenu = () => {
       <React.Fragment key={data.id}>
         {data.type === "favorite" && (
           <ListItem sort={ItemSort.CENTER_LEFT} height="24px">
-            <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>
+            <Span size={SpanSize.S} weight={SpanWeight.L} type={SpanColor.GRAY}>
               <Styled.FavoriteIcon />
               {data.content}
             </Span>
@@ -66,7 +66,7 @@ const ClubMenu = () => {
         )}
         {data.type === "class" && (
           <ListItem sort={ItemSort.CENTER_LEFT} height="24px">
-            <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>
+            <Span size={SpanSize.S} weight={SpanWeight.L} type={SpanColor.GRAY}>
               # {data.content}
             </Span>
           </ListItem>

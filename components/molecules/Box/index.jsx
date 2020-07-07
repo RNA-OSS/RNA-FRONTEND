@@ -37,6 +37,11 @@ export const BoxSort = {
   SPACE_AROUND_RIGHT: 53,
 };
 
+export const BoxWrap = {
+  WRAP: "wrap",
+  NOWRAP: "nowrap",
+};
+
 const Box = ({
   children,
   direction = BoxDirection.ROW,
@@ -46,6 +51,7 @@ const Box = ({
   flexAttr = ["auto"],
   width = "100%",
   height = "auto",
+  wrap = BoxWrap.NOWRAP,
 }) => {
   const [horizontal, vertical] = CalculateSort(sort);
 
@@ -65,6 +71,7 @@ const Box = ({
       width={width}
       height={height}
       flex={flex}
+      wrap={wrap}
     >
       {children}
     </Styled.Box>
@@ -73,6 +80,14 @@ const Box = ({
 
 Box.propTypes = {
   children: propTypes.node.isRequired,
+  direction: propTypes.string,
+  sort: propTypes.number,
+  mar: propTypes.array,
+  pad: propTypes.array,
+  flexAttr: propTypes.array,
+  width: propTypes.string,
+  height: propTypes.string,
+  wrap: propTypes.string,
 };
 
 export default Box;

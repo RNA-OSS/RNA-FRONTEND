@@ -18,6 +18,186 @@ const initialState = {
 
 const dummyPosts = [
   {
+    id: 21,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 20,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 19,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 18,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 17,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 16,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 15,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 14,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 13,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 12,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 11,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 10,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 9,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 8,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 7,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 6,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 5,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
+    id: 4,
+    board: "공지사항",
+    title: "내 이름은 김현준, 탐정이지.",
+    user: "4whomtbts",
+    views: "777",
+    comments: [],
+    date: "20.06.12",
+    contents: "제곧네",
+  },
+  {
     id: 3,
     board: "공지사항",
     title: "내 이름은 김현준, 탐정이지.",
@@ -104,13 +284,20 @@ const postReducer = (prevState = initialState, action) => {
       case LOAD_POST_LISTS_SUCCESS:
         draft.isLoadedPostLists = true;
         draft.isLoadingPostLists = false;
-        draft.postLists = dummyPosts.map((post) => {
-          return {
+        let col = 0;
+        draft.postLists = Array(Math.ceil(dummyPosts.length / 20))
+          .fill(null)
+          .map(() => Array());
+        dummyPosts.forEach((post, i) => {
+          if (i % 20 === 0 && i !== 0) {
+            col++;
+          }
+          draft.postLists[col].push({
             id: post.id,
             title: post.title,
             user: post.user,
             date: post.date,
-          };
+          });
         });
         break;
       case LOAD_POST_LISTS_FAILURE:

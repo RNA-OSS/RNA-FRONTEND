@@ -4,13 +4,13 @@ import propTypes from "prop-types";
 import * as Styled from "./style";
 import { CalculateBox } from "../../../utils";
 
-import Span, { SpanSize, SpanType, SpanWeight } from "../../atoms/Span";
+import Span, { SpanSize, SpanWeight, SpanColor } from "../../atoms/Span";
 
 const Th = ({ children, pad = [0], width }) => {
   const padding = CalculateBox(pad);
   return (
     <Styled.Th padding={padding} width={width}>
-      <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>
+      <Span size={SpanSize.S} weight={SpanWeight.L} type={SpanColor.GRAY}>
         {children}
       </Span>
     </Styled.Th>
@@ -19,6 +19,8 @@ const Th = ({ children, pad = [0], width }) => {
 
 Th.prototype = {
   children: propTypes.node.isRequired,
+  width: propTypes.string,
+  pad: propTypes.array,
 };
 
 export default Th;

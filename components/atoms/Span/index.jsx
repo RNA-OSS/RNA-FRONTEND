@@ -1,5 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
+
 import * as Styled from "./style";
 import {
   WEIGHT_S,
@@ -11,41 +12,39 @@ import {
   TEXT_L,
 } from "../../../public/font";
 import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../public/color";
+import { CalculateBox } from "../../../utils";
 
-export const SpanType = {
-  normal: BLACK,
-  primary: MAIN_COLOR,
-  gray: DARK_GRAY,
-  warn: WARNING,
+export const SpanColor = {
+  BLACK: BLACK,
+  MAIN: MAIN_COLOR,
+  GRAY: DARK_GRAY,
+  WARNING: WARNING,
 };
 
 export const SpanSize = {
-  s: TEXT_S,
-  m: TEXT_M,
-  l: TEXT_L,
+  S: TEXT_S,
+  M: TEXT_M,
+  L: TEXT_L,
 };
 
 export const SpanWeight = {
-  s: WEIGHT_S,
-  m: WEIGHT_M,
-  l: WEIGHT_L,
-  xl: WEIGHT_XL,
+  S: WEIGHT_S,
+  M: WEIGHT_M,
+  L: WEIGHT_L,
+  XL: WEIGHT_XL,
 };
 
 const Span = ({
   children = "",
-  size = SpanSize.m,
-  weight = SpanWeight.m,
-  type = SpanType.normal,
-  marginBottom = "0px",
+  size = SpanSize.M,
+  weight = SpanWeight.M,
+  color = SpanColor.BLACK,
+  mar = [0],
 }) => {
+  const margin = CalculateBox(mar);
+
   return (
-    <Styled.Span
-      size={size}
-      weight={weight}
-      type={type}
-      marginBottom={marginBottom}
-    >
+    <Styled.Span size={size} weight={weight} color={color} margin={margin}>
       {children}
     </Styled.Span>
   );
@@ -55,8 +54,8 @@ Span.propTypes = {
   children: propTypes.node.isRequired,
   size: propTypes.string,
   weight: propTypes.number,
-  type: propTypes.string,
-  marginBottom: propTypes.string,
+  color: propTypes.string,
+  mar: propTypes.array,
 };
 
 export default Span;
