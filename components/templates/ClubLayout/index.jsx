@@ -19,7 +19,11 @@ const ClubLayout = ({ children }) => {
           <ClubNavigation />
         </Box>
 
-        <Box sort={BoxSort.TOP_CENTER} direction={BoxDirection.COL}>
+        <Box
+          sort={BoxSort.TOP_CENTER}
+          direction={BoxDirection.COL}
+          flexAttr={["auto"]}
+        >
           {children}
         </Box>
       </Container>

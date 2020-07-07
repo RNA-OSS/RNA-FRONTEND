@@ -22,6 +22,7 @@ const Header = () => {
   return (
     <Styled.HeaderContainer>
       <Container>
+        {/* 로고 */}
         <Box sort={BoxSort.CENTER_LEFT} flexAttr={[0, 1, "283px"]}>
           <Link href="/">
             <a>
@@ -29,10 +30,11 @@ const Header = () => {
             </a>
           </Link>
         </Box>
-
+        {/* 메뉴 */}
         <Box
           direction={BoxDirection.ROW}
           sort={BoxSort.CENTER_SPACE_BETWEEN}
+          flexAttr={["auto"]}
           height="100%"
           mar={[0, 0, 0, 3]}
         >

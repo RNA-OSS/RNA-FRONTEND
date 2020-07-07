@@ -48,10 +48,12 @@ const Box = ({
   sort = BoxSort.CENTER_CENTER,
   mar = [0],
   pad = [0],
-  flexAttr = ["auto"],
+  flexAttr = ["none"],
   width = "100%",
   height = "auto",
+  minHeight = "auto",
   wrap = BoxWrap.NOWRAP,
+  card = false,
 }) => {
   const [horizontal, vertical] = CalculateSort(sort);
 
@@ -70,8 +72,10 @@ const Box = ({
       padding={padding}
       width={width}
       height={height}
+      minHeight={minHeight}
       flex={flex}
       wrap={wrap}
+      card={card}
     >
       {children}
     </Styled.Box>
@@ -87,7 +91,9 @@ Box.propTypes = {
   flexAttr: propTypes.array,
   width: propTypes.string,
   height: propTypes.string,
+  minHeight: propTypes.string,
   wrap: propTypes.string,
+  card: propTypes.bool,
 };
 
 export default Box;
