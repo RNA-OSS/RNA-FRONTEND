@@ -1,7 +1,7 @@
 import React from "react";
 
 import * as Styled from "./style";
-import Input from "../../atoms/Input";
+import Input, { InputStyle } from "../../atoms/Input";
 import Button from "../../atoms/Button";
 import Box, { BoxDirection } from "../../molecules/Box";
 
@@ -20,6 +20,7 @@ const SignInForm = () => {
           marginBottom="6rem"
           value={email}
           onChange={onChangeEmail}
+          style={InputStyle.BORDER}
           required
         />
       </Styled.InputContainer>
@@ -31,6 +32,7 @@ const SignInForm = () => {
           type="password"
           value={password}
           onChange={onChangePassword}
+          style={InputStyle.BORDER}
           required
         />
       </Styled.InputContainer>

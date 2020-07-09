@@ -9,6 +9,7 @@ import Span, { SpanSize, SpanWeight, SpanColor } from "../../atoms/Span";
 import P, { PSize, PWeight } from "../../atoms/P";
 import Profile from "../../molecules/Profile";
 import Border from "../../molecules/Border";
+import Comment from "../Comment";
 
 const Post = () => {
   return (
@@ -67,7 +68,7 @@ const Post = () => {
       </Box>
 
       <Box direction={BoxDirection.COL} sort={BoxSort.TOP_LEFT}>
-        <Box sort={BoxSort.CENTER_SPACE_BETWEEN}>
+        <Box sort={BoxSort.CENTER_SPACE_BETWEEN} mar={[0, 0, 1.2, 0]}>
           <Span>댓글</Span>
           <List>
             <ListItem>공유</ListItem>
@@ -77,7 +78,7 @@ const Post = () => {
             <ListItem>신고</ListItem>
           </List>
         </Box>
-        <Border mar={[2, 0]} />
+        <Comment />
       </Box>
     </Box>
   );

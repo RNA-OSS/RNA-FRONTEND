@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 
 import * as Styled from "./style";
 import * as SingStyled from "../SignInForm/style";
-import Input from "../../atoms/Input";
+import Input, { InputStyle } from "../../atoms/Input";
 import Button from "../../atoms/Button";
 import Box, { BoxDirection } from "../../molecules/Box";
 
@@ -119,6 +119,7 @@ const SignUpForm = () => {
           onChange={onChangeEmail}
           placeholder="rna123@email.com"
           onFocus={onFocusEmail}
+          style={InputStyle.BORDER}
           required
         ></Input>
         <Styled.CheckContainer visible={emailFocus}>
@@ -134,6 +135,7 @@ const SignUpForm = () => {
           onChange={onChangeName}
           placeholder="홍길동"
           onFocus={onFocusName}
+          style={InputStyle.BORDER}
           required
         ></Input>
         <Styled.CheckContainer visible={nameFocus}>
@@ -152,6 +154,7 @@ const SignUpForm = () => {
           onChange={onChangePassword}
           placeholder="비밀번호 입력"
           onFocus={ondFocusPassword}
+          style={InputStyle.BORDER}
           required
         ></Input>
         <Styled.PasswordShowButton onClick={onClickPasswordShowBtn}>
@@ -177,6 +180,7 @@ const SignUpForm = () => {
           onChange={onChangePasswordCheck}
           placeholder="비밀번호 확인"
           onFocus={onFocusPasswordCheck}
+          style={InputStyle.BORDER}
           required
         ></Input>
         <Styled.PasswordShowButton onClick={onClickPasswordCheckShowBtn}>
