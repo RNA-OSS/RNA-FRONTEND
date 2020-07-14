@@ -5,7 +5,7 @@ import { WEIGHT_L } from "../../../public/font";
 export const Button = styled.button`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  margin-bottom: ${(props) => props.marginBottom};
+  margin: ${(props) => props.margin};
   font-size: ${(props) => props.fontSize};
   font-weight: ${WEIGHT_L};
   text-transform: uppercase;

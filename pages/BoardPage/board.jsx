@@ -9,8 +9,7 @@ const board = () => {
     <div>
       <Header />
       <ClubLayout>
-        <Post />
-        {/* <Board /> */}
+        <Board />
       </ClubLayout>
     </div>
   );

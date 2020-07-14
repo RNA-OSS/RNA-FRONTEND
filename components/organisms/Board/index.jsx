@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import propTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import Router, { useRouter } from "next/router";
 
 import * as Styled from "./style";
+import Post from "../Post";
+import Loading from "../../atoms/Loading";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
 import Table from "../../molecules/Table";
 import Box, { BoxSort } from "../../molecules/Box";
@@ -20,8 +21,9 @@ const HeadData = [
 
 const Board = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
+  const [showPost, setShowPost] = useState(false);
   const dispatch = useDispatch();
-  const { postLists, isLoadedPostLists } = useSelector(
+  const { isLoadedPost, post, postLists, isLoadedPostLists } = useSelector(
     (state) => state.postReducer
   );
 
@@ -66,6 +68,14 @@ const Board = () => {
 
   return (
     <React.Fragment>
+      {isLoadedPost ? (
+        <Post postData={post} />
+      ) : (
+        <Box height="676px">
+          <Loading />
+        </Box>
+      )}
+
       <Box sort={BoxSort.CENTER_LEFT}>
         <Title size={TitleSize.xs} weight={TitleWeight.l} mar={[2, 0, 2, 2]}>
           게시판

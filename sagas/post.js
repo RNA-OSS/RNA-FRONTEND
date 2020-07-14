@@ -13,6 +13,7 @@ import {
   ADD_COMMENT_SUCCESS,
   ADD_COMMENT_FAILURE,
 } from "../reducers/post";
+import Axios from "axios";
 
 function addPostAPI() {}
 
@@ -39,10 +40,9 @@ function addCommentAPI() {}
 
 function* addComment(action) {
   try {
-    yield delay(1000);
     yield put({
       type: ADD_COMMENT_SUCCESS,
-      data: action.data.postId,
+      data: action.commentData,
     });
   } catch (err) {
     console.log(err);
@@ -59,6 +59,7 @@ function* watchAddComment() {
 
 function* loadPost(action) {
   try {
+    yield delay(1000);
     yield put({
       type: LOAD_POST_SUCCESS,
       id: action.postId,

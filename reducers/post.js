@@ -7,7 +7,7 @@ const initialState = {
   postLists: [],
   isLoadedPost: false,
   isLoadingPost: false,
-  post: [],
+  post: null,
   addPostErrorReason: "",
   isAddingPost: false,
   isAddedPost: false,
@@ -23,7 +23,7 @@ const dummyPosts = [
     title: "내 이름은 김현준, 탐정이지.",
     user: "4whomtbts",
     views: "777",
-    comments: [],
+    comments: [{ id: 1, user: "JKCho", contents: "댓글을 테스트한다." }],
     date: "20.06.12",
     contents: "제곧네",
   },
@@ -312,7 +312,6 @@ const postReducer = (prevState = initialState, action) => {
         draft.isLoadedPost = true;
         draft.isLoadingPost = false;
         draft.post = dummyPosts[dummyPosts.findIndex((v) => v.id == action.id)];
-
         break;
       case LOAD_POST_FAILURE:
         draft.isLoadedPost = false;
@@ -340,9 +339,13 @@ const postReducer = (prevState = initialState, action) => {
       case ADD_COMMENT_SUCCESS:
         draft.isAddingComment = false;
         draft.isAddedComment = true;
-        draft.mainPosts[
-          draft.mainPosts.findIndex((v) => v.id === action.data)
-        ].comments.push(dummyComment);
+        const postIndex = dummyPosts.findIndex(
+          (v) => v.id == action.data.postId
+        );
+        draft.postLists[postIndex].comments.push(action.data);
+        // draft.postLists[
+        //   draft.postLists.findIndex((v) => v.id === action.data.postId)
+        // ].comments.push(action.data);
         break;
       case ADD_COMMENT_FAILURE:
         draft.isAddingComment = false;

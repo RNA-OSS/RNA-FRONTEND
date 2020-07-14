@@ -7,7 +7,7 @@ import Box, { BoxSort, BoxDirection } from "../../molecules/Box";
 import Span, { SpanSize, SpanWeight, SpanColor } from "../../atoms/Span";
 import P, { PType, PWeight } from "../../atoms/P";
 
-const SingleComment = ({}) => {
+const SingleComment = ({ comment }) => {
   return (
     <Box pad={[2, 0]} sort={BoxSort.TOP_SPACE_BETWEEN}>
       <Box width="auto" mar={[0, 1.2, 0, 0]}>
@@ -17,7 +17,7 @@ const SingleComment = ({}) => {
         <Box sort={BoxSort.TOP_SPACE_BETWEEN} mar={[0, 0, 1.2, 0]}>
           <Box width="auto">
             <Span size={SpanSize.S} weight={SpanWeight.L} mar={[0, 0.6, 0, 0]}>
-              호호호잼누쿤
+              {comment.user}
             </Span>
             <Span
               size={SpanSize.S}
@@ -38,11 +38,9 @@ const SingleComment = ({}) => {
           </Box>
         </Box>
 
-        <Box sort={BoxSort.TOP_LEFT} width="auto">
+        <Box sort={BoxSort.TOP_LEFT}>
           <P type={PType.gray} weight={PWeight.l}>
-            아아아아아아앙 가모라~! 아아아아아아앙 가모라~! 아아아아아아앙
-            가모라~! 아아아아아아앙 가모라~! 아아아아아아앙 가모라~!
-            아아아아아아앙 가모라~! 아아아아아아앙 가모라~!
+            {comment.contents}
           </P>
         </Box>
       </Box>

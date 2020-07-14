@@ -73,10 +73,12 @@ const ClubMenu = () => {
         )}
         {data.type === "general" && (
           <ListItem sort={ItemSort.CENTER_LEFT} height="24px">
-            <A size={ASize.s} weight={AWeight.m} type={AType.gray}>
-              <Styled.ArrowIcon />
-              {data.content}
-            </A>
+            <Link href="/BoardPage/board">
+              <A size={ASize.s} weight={AWeight.m} type={AType.gray}>
+                <Styled.ArrowIcon />
+                {data.content}
+              </A>
+            </Link>
           </ListItem>
         )}
       </React.Fragment>
