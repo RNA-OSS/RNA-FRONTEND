@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import propTypes from "prop-types";
-import { useDispatch, useSelector } from "react-redux";
 
 import * as Styled from "./style";
+
+import usePost from "../../../hooks/usePost";
+
 import Post from "../Post";
 import Loading from "../../atoms/Loading";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
@@ -10,7 +12,6 @@ import Table from "../../molecules/Table";
 import Box, { BoxSort } from "../../molecules/Box";
 import Span from "../../atoms/Span";
 import Button, { ButtonFontSize } from "../../atoms/Button";
-import { LOAD_POST_LISTS_REQUEST } from "../../../reducers/post";
 
 const HeadData = [
   { name: "번호", width: "10%" },
@@ -21,14 +22,10 @@ const HeadData = [
 
 const Board = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
-  const [showPost, setShowPost] = useState(false);
-  const dispatch = useDispatch();
-  const { isLoadedPost, post, postLists, isLoadedPostLists } = useSelector(
-    (state) => state.postReducer
-  );
+  const { isLoadedPost, post, postLists, isLoadedPostLists, fetch } = usePost();
 
   useEffect(() => {
-    dispatch({ type: LOAD_POST_LISTS_REQUEST });
+    fetch();
   }, []);
 
   const onClickMoveIndex = useCallback(

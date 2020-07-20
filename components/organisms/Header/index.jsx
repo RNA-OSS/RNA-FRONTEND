@@ -6,7 +6,6 @@ import * as Styled from "./style";
 import { LOGOUT_REQUEST } from "../../../reducers/user";
 import Image, { Type } from "../../atoms/Image";
 import A, { ASize, AWeight } from "../../atoms/A";
-import Container from "../../molecules/Container";
 import List, { ListSort } from "../../molecules/List";
 import ListItem, { ItemSort } from "../../molecules/ListItem";
 import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
@@ -21,7 +20,7 @@ const Header = () => {
 
   return (
     <Styled.HeaderContainer>
-      <Container>
+      <Box width="1200px" height="100%">
         {/* 로고 */}
         <Box sort={BoxSort.CENTER_LEFT} flexAttr={[0, 1, "283px"]}>
           <Link href="/">
@@ -75,7 +74,7 @@ const Header = () => {
             )}
           </List>
         </Box>
-      </Container>
+      </Box>
     </Styled.HeaderContainer>
   );
 };

@@ -121,7 +121,7 @@ const SignUpForm = () => {
           onFocus={onFocusEmail}
           style={InputStyle.BORDER}
           required
-        ></Input>
+        />
         <Styled.CheckContainer visible={emailFocus}>
           <Styled.CheckText checked={emailCheck}>이메일 형식</Styled.CheckText>
         </Styled.CheckContainer>
@@ -137,7 +137,7 @@ const SignUpForm = () => {
           onFocus={onFocusName}
           style={InputStyle.BORDER}
           required
-        ></Input>
+        />
         <Styled.CheckContainer visible={nameFocus}>
           <Styled.CheckText checked={nameInputCheck}>
             올바른 이름 입력
@@ -156,7 +156,7 @@ const SignUpForm = () => {
           onFocus={ondFocusPassword}
           style={InputStyle.BORDER}
           required
-        ></Input>
+        />
         <Styled.PasswordShowButton onClick={onClickPasswordShowBtn}>
           {passwordShow ? <Styled.EyeSlashIcon /> : <Styled.EyeIcon />}
         </Styled.PasswordShowButton>
@@ -182,7 +182,7 @@ const SignUpForm = () => {
           onFocus={onFocusPasswordCheck}
           style={InputStyle.BORDER}
           required
-        ></Input>
+        />
         <Styled.PasswordShowButton onClick={onClickPasswordCheckShowBtn}>
           {passwordCheckShow ? <Styled.EyeSlashIcon /> : <Styled.EyeIcon />}
         </Styled.PasswordShowButton>

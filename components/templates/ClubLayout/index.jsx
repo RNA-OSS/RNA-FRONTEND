@@ -9,7 +9,7 @@ import ClubNavigation from "../../organisms/ClubNavigation";
 const ClubLayout = ({ children }) => {
   return (
     <Styled.ClubContainer>
-      <Container>
+      <Box width="1200px" height="100%" sort={BoxSort.TOP_LEFT}>
         <Box
           direction={BoxDirection.COL}
           sort={BoxSort.TOP_CENTER}
@@ -26,7 +26,7 @@ const ClubLayout = ({ children }) => {
         >
           {children}
         </Box>
-      </Container>
+      </Box>
     </Styled.ClubContainer>
   );
 };

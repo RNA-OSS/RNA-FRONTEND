@@ -42,6 +42,16 @@ export const BoxWrap = {
   NOWRAP: "nowrap",
 };
 
+import styled, { css } from "styled-components";
+import { WHITE } from "../../../public/color";
+
+const Card = css`
+  background-color: ${WHITE};
+  border-radius: 10px;
+  padding: 2rem;
+  box-sizing: border-box;
+`;
+
 const Box = ({
   children,
   direction = BoxDirection.ROW,
@@ -54,6 +64,7 @@ const Box = ({
   minHeight = "auto",
   wrap = BoxWrap.NOWRAP,
   card = false,
+  tag = "div",
 }) => {
   const [horizontal, vertical] = CalculateSort(sort);
 
@@ -63,8 +74,24 @@ const Box = ({
   const margin = CalculateBox(mar);
   const padding = CalculateBox(pad);
 
+  const Box = styled[tag]`
+    display: flex;
+    box-sizing: border-box;
+    flex: ${(props) => props.flex};
+    flex-direction: ${(props) => props.direction};
+    justify-content: ${(props) => props.justify};
+    align-items: ${(props) => props.align};
+    margin: ${(props) => props.margin};
+    padding: ${(props) => props.padding};
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    min-height: ${(props) => props.minHeight};
+    flex-wrap: ${(props) => props.wrap};
+    ${(props) => props.card && Card}
+  `;
+
   return (
-    <Styled.Box
+    <Box
       direction={direction}
       justify={justifyContent}
       align={alignItems}
@@ -78,7 +105,7 @@ const Box = ({
       card={card}
     >
       {children}
-    </Styled.Box>
+    </Box>
   );
 };
 
