@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "styled-components";
-import Profile from "../../molecules/Profile";
+import ImageLoader from "../../molecules/ImageLoader";
 import Box, { BoxSort, BoxDirection } from "../../molecules/Box";
 import Span, { SpanSize, SpanWeight, SpanColor } from "../../atoms/Span";
 import P, { PType, PWeight } from "../../atoms/P";
@@ -11,7 +11,7 @@ const SingleComment = ({ comment }) => {
   return (
     <Box pad={[2, 0]} sort={BoxSort.TOP_SPACE_BETWEEN}>
       <Box width="auto" mar={[0, 1.2, 0, 0]}>
-        <Profile width="36px" />
+        <ImageLoader width="36px" />
       </Box>
       <Box direction={BoxDirection.COL} flexAttr={["auto"]}>
         <Box sort={BoxSort.TOP_SPACE_BETWEEN} mar={[0, 0, 1.2, 0]}>

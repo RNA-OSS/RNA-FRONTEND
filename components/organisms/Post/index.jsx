@@ -9,7 +9,7 @@ import ListItem from "../../molecules/ListItem";
 import Title, { TitleSize, TitleType, TitleWeight } from "../../atoms/Title";
 import Span, { SpanSize, SpanWeight, SpanColor } from "../../atoms/Span";
 import P, { PSize, PWeight } from "../../atoms/P";
-import Profile from "../../molecules/Profile";
+import ImageLoader from "../../molecules/ImageLoader";
 import Border from "../../molecules/Border";
 import Comment from "../Comment";
 
@@ -73,7 +73,7 @@ const Post = ({ postData }) => {
           <Box width="auto">
             {/* 프로필 이미지 */}
             <Box width="auto" mar={[0, 1.2, 0, 0]}>
-              <Profile width="36px" />
+              <ImageLoader width="36px" />
             </Box>
             <Box
               direction={BoxDirection.COL}

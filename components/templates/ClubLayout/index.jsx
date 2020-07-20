@@ -2,7 +2,6 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "./style";
-import Container from "../../molecules/Container";
 import Box, { BoxDirection, BoxSort } from "../../molecules/Box";
 import ClubNavigation from "../../organisms/ClubNavigation";
 

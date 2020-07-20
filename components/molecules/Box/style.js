@@ -8,7 +8,7 @@ const Card = css`
   box-sizing: border-box;
 `;
 
-export const Box = styled["div"]`
+export const Box = styled.div`
   display: flex;
   box-sizing: border-box;
   flex: ${(props) => props.flex};
